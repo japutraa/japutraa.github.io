@@ -687,30 +687,69 @@ body {
   margin-top: 22px;
 }
 
-.vendor-grey-minimal {
-  margin-top: 20px;
-  font-size: 0.90rem;
-  line-height: 1.55;
+.vendor-grey-with-logo {
   max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 24px auto 0 auto;
   text-align: center;
-
-  color: var(--muted);
-  opacity: 0.85;
 }
 
-.vendor-grey-minimal strong {
+.vendor-grey-with-logo img {
+  width: 110px;
+  height: auto;
+  margin-bottom: 12px;
+  opacity: 0.9;
+}
+
+.vendor-grey-with-logo p {
+  font-size: 0.90rem;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+.vendor-grey-with-logo strong {
   font-weight: 600;
   color: var(--fg);
 }
 
-.vendor-grey-minimal a {
+.vendor-grey-with-logo a {
   color: var(--accent);
   text-decoration: none;
   font-weight: 500;
 }
 
-.vendor-grey-minimal a:hover {
+.vendor-grey-with-logo a:hover {
   color: var(--accent-soft);
 }
+
+.vendor-grey-button {
+  display: inline-block;
+  padding: 14px;
+  border-radius: 20px;                 /* soft rounded corner */
+  background: #ffffffcc;               /* subtle white glass-like */
+  border: 1px solid var(--border);     
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  transition: 0.2s ease;
+  margin-bottom: 14px;
+  padding: 24px 20px 24px 20px;
+  border-radius: 22px;
+}
+
+.vendor-grey-button img {
+  width: 95px;      /* ukuran aesthetic */
+  height: auto;
+  display: block;
+  opacity: 0.9;
+  transition: 0.2s ease;
+  margin-top: 4px;  /* optical balance */
+}
+
+.vendor-grey-button:hover {
+  background: var(--bg-deep);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.1);
+}
+
+.vendor-grey-button:hover img {
+  opacity: 1;
+  transform: scale(1.03);
+}
+
