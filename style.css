@@ -602,3 +602,87 @@ body {
   unicode-bidi: isolate; /* biar nggak ketarik logika LTR halaman */
 }
 
+/* ===== RANGKAIAN ACARA — LAYOUT VERTIKAL RAPI ===== */
+
+.schedule-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 14px;
+}
+
+.schedule-block {
+  border-radius: var(--radius-lg);
+  padding: 14px 16px 16px;
+  background: rgba(247, 242, 234, 0.98);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.04);
+}
+
+.schedule-chip {
+  margin: 0 0 6px;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.schedule-row {
+  display: grid;
+  grid-template-columns: 110px minmax(0, 1fr);
+  column-gap: 14px;
+  row-gap: 4px;
+  padding: 8px 0;
+  border-top: 1px dashed rgba(0, 0, 0, 0.08);
+}
+
+.schedule-row:first-of-type {
+  border-top: none;
+}
+
+.schedule-time {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.schedule-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.schedule-label {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.schedule-text {
+  margin: 0;
+  font-size: 0.86rem;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+@media (min-width: 720px) {
+  .schedule-wrapper {
+    gap: 18px;
+  }
+
+  .schedule-block {
+    padding: 16px 20px 18px;
+  }
+}
+
+/* beri jarak ekstra ke kartu lokasi */
+.section--details .card--location {
+  margin-top: 22px;
+}
